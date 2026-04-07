@@ -4,24 +4,27 @@
 #include <stdio.h>
 
 int main() {
-    int  r,count,n=121;
+    int  rev,rem=0,n;
      
-    // printf("Enter Num:");
-    // scanf("%d",&m);
+    printf("Enter Num:");
+    scanf("%d",&n);
+
+     int temp=n;
 
      while(n>0){ 
-        r=n%10;
-        count = r;
+        rev=n%10;
+         rem=(rem*10)+rev;
         n=n/10; 
          
-     }
-       if (count == n)
+    }  
+    // printf("Reverse:%d\n",rem); 
+    if ( rem == temp)
        {
-        printf("Palindrome");
+        printf("%d is Palindrome",temp);
        }
-       else{
-        printf("Not palindrome");
-       }
+    else{
+        printf("%d is Not palindrome",temp);
+       }    
       
     return 0;
 }
